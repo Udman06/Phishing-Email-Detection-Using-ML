@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/Style.css">
+    <link rel="stylesheet" href="Css/radio.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Main Section Start -->
+    <section>
+        <!-- Header part start -->
+        <header>
+            <nav>
+                <div><a href="#" class="brand">Phishing-Detection</a></div>
+                <ul>
+                    <li><a href="#" class="active">Web App</a></li>
+                    <li><a href="#">Web Api</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header part end -->
+
+        <!-- Main Content part start -->
+        <div class="fluid-container content">
+            <div class="row m-auto">
+                <!-- Left side Text part start -->
+                <div class="col-md-6 p-5 m-auto typo-content">
+                    <h1>
+                        AI-Powered Phishing Detection System
+                    </h1>
+                    <h5>[Smart Phishing & Spam Detector] </h2>
+                        <p>
+                            This is an intelligent platform where you can analyze text messages to detect whether they are legitimate or potentially spam or phishing.
+                        </p>
+                        <p>
+                            Simply enter the message you want to analyze, choose an algorithm, and click on the 'Check' button. The system will quickly process your input and display the result.
+                        </p>
+                        <p>
+                            Your results will appear instantly after processing is complete.
+                        </p>
+                </div>
+                <!-- Left side Text part end -->
+
+                <!-- Form part start -->
+                <div class="col-md-6 p-5 m-auto form-content">
+                    <form method="post" class="main-form">
+                        {% csrf_token %}
+                        <textarea name="rawdata" placeholder="Enter your message here to check for spam or phishing content..." id="rawdata"></textarea><br>
+                        <div class="algo-choice">
+                            <label class="radiocontainer">Algorithm-1
+                                <input type="radio" name="algo">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer">Algorithm - 2
+                                <input type="radio" name="algo">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer">Algorithm - 3
+                                <input type="radio" name="algo">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="check-holder">
+                            <button type="submit" class="check-btn">Check</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Form part end -->
+            </div>
+        </div>
+        <!-- Main Content part end -->
+    </section>
+    <!-- Main Section End -->
+    <script src="./Js/JQuery1.js"></script>
+    <script src="./Js/Bootstrap.min.js"></script>
+    <script src="./Js/Main.js"></script>
+</body>
+
+</html>
